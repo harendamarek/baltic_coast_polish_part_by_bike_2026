@@ -154,9 +154,9 @@ const PLANNED=[
 ];
 
 const map = L.map('map',{zoomControl:true}).setView([54.15,17.5],7);
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
-  attribution:'© Stadia Maps © OpenStreetMap contributors',
-  maxZoom:20
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom:19
 }).addTo(map);
 
 PLANNED.forEach(s=>L.polyline(s.coords,{color:'#2e3240',weight:2.5,opacity:1,dashArray:'5,5'}).addTo(map));
